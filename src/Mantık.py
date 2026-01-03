@@ -17,12 +17,12 @@ def değil(A):
     else:
         return 1
 
-# programın giriş kısmı.
+# Bilgilerim,program hakkında kısa bilgi ve yol ayrımı.
 print("Ali Uçar 24360859022 BLM101 proje3")
 print("Bu program 2 veya 3 değişkenli mantık kapılarını çözebilir(A x B veya A x (B x C)) \nve bunların doğruluk tablosunu çıkarabilir.")
 print("1.Mantık kapısı simulatörü.\n2.Mantık kapısı doğruluk tablosu.")
-path = int(input("Lütfen istediğiniz özelliğin numarasını giriniz:"))
-# Burada if,elif le iki kısmı ayırdım.Kullanıcı girdiği sayıya göre ilerleyecek
+path = int(input("Lütfen istediğiniz özelliğin numarasını(1/2) giriniz:"))
+# Burada if,elif le iki kısmı ayırdım.Kullanıcı girdiği sayıya göre ilerleyecek.Hatalı girişte ise en son else de hata mesajı alacak.
 if (path == 1):
     print("Mantık kapısı simulatörüne hoşgeldiniz!")
     degree = int(input("Lütfen mantık kapısının değişken sayısını giriniz(1,2,3):"))
@@ -67,6 +67,7 @@ if (path == 1):
                 B = xor(B, C)
             else:
                 print("Lütfen programı tekrar başlatın ve var olan kapılardan birini girin.")
+                #Kodun bazı yerlerinde hata mesajından sonra ayrıca python hata mesajı çıktığından karışıklığı önlemek için bazı hata mesajlarındanından sonra direkt programın sonlanması için exit koydum.
                 exit()
         else:
             print("Lütfen programı tekrar başlatın ve var olan rakamlardan(1/0) birini girin.")
